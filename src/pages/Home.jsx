@@ -2,6 +2,7 @@ import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { useNavigate } from "react-router-dom";
 import { FaCode } from "react-icons/fa";
+import profileImage from "../assets/Images/profile1.png";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -66,7 +67,7 @@ const Home = () => {
         {/* Add pb-8 here */}
         <div className="relative">
           <img
-            src="/src/assets/Images/profile1.png"
+            src={profileImage}
             alt="profile"
             className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm xl:max-w-md rounded-xl shadow-2xl border-2 border-gray-700 hover:scale-105 transition duration-300 ease-in-out"
           />
