@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useTheme } from "/src/context/ThemeContext";
+import { useTheme } from "/src/context/Themecontext";
 import { Menu, X } from "lucide-react";
 
 const Sidebar = () => {
