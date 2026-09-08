@@ -1,70 +1,76 @@
-// src/pages/Education.jsx
+
 import React from "react";
 import { motion } from "framer-motion";
 
 const educationData = [
   {
-    emoji: "🎓",
     degree: "Master of Computer Applications (MCA)",
     institution: "KLS Gogte Institute of Technology",
-    address: "Belagavi, Karnataka",
+    location: "Belagavi, Karnataka",
     year: "2024",
   },
   {
-    emoji: "💻",
     degree: "Bachelor of Computer Applications (BCA)",
     institution: "Global Innovative College of BCA",
-    address: "Hubli, Karnataka",
+    location: "Hubli, Karnataka",
     year: "2022",
   },
-
   {
-    emoji: "🔬",
     degree: "PUC (Science)",
     institution: "P C Jabin Science College",
-    address: "Hubli, Karnataka",
+    location: "Hubli, Karnataka",
     year: "2019",
   },
-
   {
-    emoji: "📘",
-    degree: "10th Standard",
+    degree: "SSLC (10th Standard)",
     institution: "Sanskaar English Medium School",
-    address: "Hubli, Karnataka",
+    location: "Hubli, Karnataka",
     year: "2017",
   },
-
-  
 ];
 
 const Education = () => {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16 text-gray-800">
-      <h2 className="text-3xl font-bold mb-10 border-b-2 pb-2 border-orange-500 dark:text-gray-200">
-         🏫 My Education Journey
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
+    <section className="max-w-5xl mx-auto px-6 py-20">
+      <motion.h2
+        className="text-4xl font-bold text-center mb-12 dark:text-white"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
+        Education
+      </motion.h2>
+
+      <div className="relative border-l-2 border-blue-500 ml-4">
         {educationData.map((item, index) => (
           <motion.div
             key={index}
-            className="bg-white shadow-md rounded-xl p-6 border border-gray-200"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
+            className="mb-10 ml-8"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: index * 0.15 }}
           >
-            <div className="text-3xl mb-2">{item.emoji}</div>
-            <h3 className="text-xl font-semibold text-gray-800">
-              {item.degree}
-            </h3>
-            <p className="text-sm text-gray-600 mt-2 font-medium">
-              {item.institution}
-            </p>
-            <p className="text-sm text-gray-500">{item.address}</p>
-            <p className="text-sm text-gray-400 mt-1">
-              Year of Completion: {item.year}
-            </p>
+            {/* Timeline Dot */}
+            <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] mt-2"></div>
+
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-5 hover:shadow-xl transition duration-300">
+              <div className="flex justify-between items-center flex-wrap gap-2">
+                <h3 className="text-lg font-semibold dark:text-white">
+                  {item.degree}
+                </h3>
+
+                <span className="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full">
+                  {item.year}
+                </span>
+              </div>
+
+              <p className="text-gray-700 dark:text-gray-300 mt-2 font-medium">
+                {item.institution}
+              </p>
+
+              <p className="text-gray-500 text-sm">
+                {item.location}
+              </p>
+            </div>
           </motion.div>
         ))}
       </div>
