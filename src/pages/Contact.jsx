@@ -1,7 +1,7 @@
+
 import {
   FaGithub,
   FaLinkedin,
-  FaTwitter,
   FaInstagram,
   FaEnvelope,
 } from "react-icons/fa";
@@ -9,98 +9,85 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section className="max-w-4xl mx-auto px-4 py-20 text-gray-800 relative">
+    <section className="max-w-4xl mx-auto px-6 py-20 text-center">
       {/* Heading */}
       <motion.h2
-        className="text-3xl font-extrabold mb-4 relative z-10 dark:text-gray-100"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        className="text-4xl font-bold mb-4 dark:text-white"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        Let’s Connect
+        Let's Work Together
       </motion.h2>
 
       <motion.p
-        className="text-gray-600 mb-10 max-w-xl dark:text-gray-100"
+        className="text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-10"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
       >
-        Feel free to reach out for collaborations, freelance work, or just to
-        say hello! I'm always open to new opportunities.
+        Open to software engineering opportunities, collaborations, and
+        innovative projects.
       </motion.p>
 
-      {/* Contact Info Box */}
+      {/* Contact Card */}
       <motion.div
-        className="bg-white shadow-lg rounded-xl p-6 mb-10 space-y-3 border"
+        className="bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-6 mb-10 border border-gray-100 dark:border-gray-700"
         initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
+        whileInView={{ opacity: 1, y: 0 }}
       >
-        <p>
-          <strong>Email:</strong>{" "}
-          <a
-            href="mailto:chetanpshi9@gmail.com"
-            className="text-blue-600 hover:underline"
-          >
-            chetanpshi9@gmail.com
-          </a>
+        <p className="text-lg font-medium dark:text-white">
+          📧 chetanpshi9@gmail.com
         </p>
-        <p>
-          <strong>Phone:</strong>{" "}
-          <a href="tel:+917483161971" className="text-blue-600 hover:underline">
-            +91 74831 61971
-          </a>
+
+        <p className="text-lg font-medium mt-2 dark:text-white">
+          📱 +91 74831 61971
         </p>
-        <p>
-          <strong>Location:</strong> Hubli, Karnataka, India
+
+        <p className="text-gray-500 dark:text-gray-400 mt-2">
+          📍 Hubli, Karnataka, India
         </p>
       </motion.div>
 
-      {/* Social Icons */}
+      {/* Social Links */}
       <motion.div
-        className="flex space-x-6 text-3xl text-gray-700"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.7 }}
+        className="flex justify-center gap-8 text-3xl"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
       >
         <a
           href="https://www.linkedin.com/in/chetanshirahatti"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-blue-600 hover:scale-110 transition-transform duration-300"
+          className="hover:scale-125 transition duration-300 text-[#0077B5]"
         >
-          <FaLinkedin style={{ color: "#0077B5" }} />
+          <FaLinkedin />
         </a>
+
         <a
           href="https://github.com/chetanshirahatti"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-black hover:scale-110 transition-transform duration-300"
+          className="hover:scale-125 transition duration-300 dark:text-white"
         >
-          <FaGithub style={{ color: "#181717" }} />
+          <FaGithub />
         </a>
-        <a
-          href="https://x.com/chetanpshi9"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-blue-400 hover:scale-110 transition-transform duration-300"
-        >
-          <FaTwitter style={{ color: "#1DA1F2" }} />
-        </a>
+
         <a
           href="https://www.instagram.com/chetan_p_shirahatti/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-pink-500 hover:scale-110 transition-transform duration-300"
+          className="hover:scale-125 transition duration-300 text-pink-600"
         >
-          <FaInstagram style={{ color: "#E1306C" }} />
+          <FaInstagram />
         </a>
+
         <a
           href="mailto:chetanpshi9@gmail.com"
-          className="hover:text-red-500 hover:scale-110 transition-transform duration-300"
+          className="hover:scale-125 transition duration-300 text-red-500"
         >
-          <FaEnvelope style={{ color: "#D44638" }} />
+          <FaEnvelope />
         </a>
       </motion.div>
     </section>
