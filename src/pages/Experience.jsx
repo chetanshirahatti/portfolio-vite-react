@@ -4,85 +4,57 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   {
-    role: 'Flutter Developer',
-    company: 'Zeksta Technology Pvt Ltd',
-     logo: "/logos/zeksta.png",
+    role: "Software Engineer",
+    company: "JRSS Smart Machine Pvt. Ltd.",
+    logo: "/logos/jrss.png",
+    url: "#",
+    location: "Pune, Maharashtra, India",
+    duration: "Sep 2025 – Present",
+    description:
+      "Working on industrial automation and machine vision solutions. Developed and maintained FTP-based image processing applications using Java and Spring Boot. Integrated Keyence and Cognex industrial cameras for image acquisition, synchronization, defect inspection, and production monitoring. Implemented image storage, server synchronization, logging, retention policies, and production support activities.",
+  },
+
+  {
+    role: "Flutter Developer",
+    company: "Zeksta Technology Pvt. Ltd.",
+    logo: "/logos/zeksta.png",
     url: "https://www.zeksta.com/",
-    location: 'Bangalore, India',
-    duration: 'Mar 2025 – Present',
+    location: "Bangalore, India",
+    duration: "Mar 2025 – Sep 2025",
     description:
-      'Worked on Buchipay Fintech application. Developed UI screens, implemented REST APIs, Firebase authentication, and used GetX for state management.',
+      "Developed fintech mobile applications using Flutter. Built responsive UI screens, integrated REST APIs, implemented Firebase Authentication, and used GetX for state management. Participated in debugging, deployment, and feature enhancements.",
   },
+
   {
-    role: 'Junior Software Engineer',
-    company: 'Knacpro Solutions Pvt Ltd',
-     logo: "/logos/zeksta.png",
+    role: "Junior Software Engineer",
+    company: "Knacpro Solutions Pvt. Ltd.",
+    logo: "/logos/knacpro.png",
     url: "https://www.knacprosolutions.in/",
-    location: 'Hubli, India',
-    duration: 'Aug 2024 – Feb 2025',
+    location: "Hubli, India",
+    duration: "Aug 2024 – Feb 2025",
     description:
-      'Built a responsive website using React.js and Next.js. Optimized performance and collaborated with team members for scalable delivery.',
+      "Developed responsive web applications using React.js and Next.js. Optimized application performance, implemented reusable components, and collaborated with cross-functional teams to deliver scalable software solutions.",
   },
+
   {
-    role: 'Software Engineer Intern',
-    company: 'EyesecCyber Security Pvt Ltd',
+    role: "Software Engineer Intern",
+    company: "Eyesec Cyber Security Pvt. Ltd.",
+    logo: "/logos/eyesec.png",
     url: "https://eyesec.in/",
-     logo: "/logos/zeksta.png",
-    location: 'Belagavi, India',
-    duration: 'Apr 2024 – Jul 2024',
+    location: "Belagavi, India",
+    duration: "Apr 2024 – Jul 2024",
     description:
-      'Built dynamic customizable wordpress websites. Developed plugins and themes, ensuring security and performance and also learnt Figma for UI/UX design.',
+      "Built customizable WordPress websites, developed themes and plugins, enhanced website security, and gained practical experience in UI/UX design using Figma.",
   },
+
   {
-    role: 'Freelance',
-    company: 'Self-employed',
-     logo: "/logos/zeksta.png",
-    url: '#',
-    location: 'Remote',
-    duration: 'Jul 2023 – Dec 2023',
+    role: "Freelance Developer",
+    company: "Self-Employed",
+    logo: "/logos/freelance.png",
+    url: "#",
+    location: "Remote",
+    duration: "Jul 2023 – Dec 2023",
     description:
-      'Developed various projects including a weather app, tic-tac-toe game and developed skills in various technologies.',
+      "Developed personal and client projects including weather applications, portfolio websites, and interactive web applications while strengthening frontend and backend development skills.",
   },
 ];
-
-const Experience = () => {
-  return (
-    <section className="max-w-5xl mx-auto px-4 py-16 text-gray-800">
-      <h2 className="text-3xl font-bold mb-10 border-b-2 pb-2 border-orange-500 dark:text-gray-100">
-       🏢 Professional Experience
-      </h2>
-      <div className="relative border-l-2 border-blue-500 pl-6 space-y-10">
-        {experiences.map((exp, index) => (
-          <motion.div
-            key={index}
-            className="relative"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            viewport={{ once: true }}
-          >
-            <span className="absolute -left-3 top-2 w-6 h-6 bg-blue-500 border-4 border-white rounded-full"></span>
-            <div className="bg-white border border-gray-200 rounded-lg p-5 shadow-md hover:shadow-lg transition duration-300">
-              <h3 className="text-lg font-semibold text-gray-800">{exp.role}</h3>
-              <p className="text-sm font-medium text-gray-700">
-                <a
-                  href={exp.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline text-blue-500"
-                >
-                  {exp.company}
-                </a>{' '}
-                – <span className="text-gray-600">{exp.location}</span>
-              </p>
-              <p className="text-sm text-gray-500 mb-2">{exp.duration}</p>
-              <p className="text-sm text-gray-700">{exp.description}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  );
-};
-
-export default Experience;
